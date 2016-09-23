@@ -1,0 +1,61 @@
+<div>
+  <link rel="stylesheet" href="ChatScreen/css/normalize.css">
+  <link rel="stylesheet" href="ChatScreen/css/style.css">
+  <link rel="stylesheet" href="bower_components/angular-notify/dist/angular-notify.min.css">
+  <div class="ui">
+    <div class="left-menu">
+      <form action="#" class="search">
+        <input placeholder="search..." type="search" name="" id="">
+        <input type="submit" value="&#xf002;">
+      </form>
+
+      <menu class="list-friends">
+        <li data-ng-repeat="friend in vm.Friends" ng-click="vm.ChatMessageCreation(friend)" style="cursor: pointer">
+          <img width="50" height="50" src="ChatScreen/css/male.png">
+          <div class="info">
+            <div class="user" ng-style="{'color': friend.color}">{{friend.firstName}}</div>
+            <div class="status on"> online</div>
+          </div>
+        </li>
+      </menu>
+    </div>
+
+    <div class="chat" ng-show="vm.chatUser.firstName">
+      <div class="top">
+        <div class="avatar">
+          <img width="50" height="50" src="ChatScreen/css/male.png" style="margin-top:-40px;"/>
+        </div>
+        <div class="info" style="margin-top: 10px;">
+          <div class="name">{{vm.chatUser.firstName}}</div>
+          <div class="count">{{vm.chatUser.status}}</div>
+        </div>
+        <i class="fa fa-star"></i>
+      </div>
+
+
+      <ul class="messages" id="scrollBar" style="overflow-y: scroll">
+        <li ng-class="message.firstName==vm.user.firstName ? 'friend-with-a-SVAGina':'i'"
+            data-ng-repeat="message in vm.Messages">
+          <div class="head">
+            <span ng-show="message.firstName!=vm.user.firstName" class="time">{{message.time}}</span>
+            <span class="name">{{message.firstName}}</span>
+            <span ng-show="message.firstName==vm.user.firstName" class="time">{{message.time}}</span>
+
+          </div>
+          <div class="message">{{message.messageBody}}</div>
+        </li>
+      </ul>
+
+      <div class="write-form">
+
+        <input class="Input" type="text" ng-model="vm.userMessage" ng-minlength="1"
+               ng-keypress="vm.sendMessage($event)"/>&nbsp;&nbsp;
+        <!--<textarea placeholder="Type your message" name="e" id="text" rows="1" ng-model="vm.userMessage"-->
+        <!--ng-keypress="vm.sendMessage($event)"></textarea>-->
+
+        <button type="button" class="btn btn-primary" ng-click="vm.messageDeliver()">Send</button>
+        <!--<span class="send">Send</span>-->
+
+      </div>
+    </div>
+  </div>

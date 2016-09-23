@@ -1,0 +1,103 @@
+<div class="container offset-sm-4 col-sm-4"
+     style="border: 1px solid #333333;position: fixed;top: 30%;left: 30%;background-color: #F7F7F9;">
+  <form name="userForm" ng-submit="vm.submitForm()" style="margin: 20px;" novalidate>
+
+
+    <div class="form-group row">
+      <label for="Name" class="col-sm-4 col-form-label">First Name</label>
+      <div class="col-sm-6 ">
+        <input type="text" name="firstName" class="form-control" id="inputName" placeholder="First Name"
+               ng-model="vm.user.firstName" ng-minlength="3" ng-maxlength="8" ng-pattern="/^[a-zA-Z0-9]*$/" username required>
+
+        <span ng-show="userForm.firstName.$pending.username">Checking if this name is available...</span>
+        <span ng-show="userForm.firstName.$error.username" style="color: #A94442">This username is already taken!</span>
+
+        <span ng-show="userForm.firstName.$invalid && !userForm.firstName.$pristine"
+              class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" style="color: #A94442"></span>
+        <span ng-show="userForm.firstName.$valid && !userForm.firstName.$pristine" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" style="color: green"></span>
+
+        <div ng-show="userForm.firstName.$invalid && !userForm.firstName.$pristine"
+             class="form-group has-error has-feedback">
+          <label ng-show="userForm.firstName.$error.pattern" class="control-label" for="inputName">You suck!!!Wrong
+            pattern, Enter again</label>
+          <label ng-show="userForm.firstName.$error.minlength" class="control-label" for="inputName">First Name is too
+            short.<-DICKHEAD-></label>
+          <label ng-show="userForm.firstName.$error.maxlength" class="control-label" for="inputName">First Name is too
+            long.<-DICKHEAD-></label>
+          <label ng-show="userForm.firstName.$error.required" class="control-label" for="inputName">You dumb fuck!!Enter
+            your name</label>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="Status" class="col-sm-4 col-form-label">Tagline/Status</label>
+      <div class="col-sm-8 ">
+        <textarea name="text" class="form-control" id="exampleTextarea" rows="3 " ng-model="vm.user.status"
+                  ng-minlength="5" required>
+        </textarea>
+        <span ng-show="userForm.text.$invalid && !userForm.text.$pristine"
+              class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" style="color: #A94442"></span>
+        <span ng-show="userForm.text.$valid && !userForm.text.$pristine"
+              class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" style="color: green"></span>
+
+        <div ng-show="userForm.text.$invalid && !userForm.text.$pristine" class="form-group has-error has-feedback">
+          <label ng-show="userForm.text.$error.minlength" class="control-label" for="exampleTextarea">Please enter a
+            normal status!!</label>
+          <label ng-show="userForm.text.$error.required" class="control-label" for="exampleTextarea">You dumb
+            fuck!!Enter your status</label>
+        </div>
+
+        <!--<div ng-show="userForm.text.$invalid && !userForm.text.$pristine">-->
+        <!--<div ng-show="userForm.text.$error.minlength"-->
+        <!--class="form-group has-warning has-feedback">Please enter a normal status!!-->
+        <!--</div>-->
+        <!--<div ng-show="userForm.firstName.$error.required">You dumb fuck!!Enter your status-->
+        <!--</div>-->
+        <!--</div>-->
+
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="offset-sm-2 col-sm-10">
+        <button ng-disabled="userForm.$invalid" type="submit" class="btn btn-primary">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<!--<div ng-show="userForm.firstName.$error.pattern"-->
+<!--class="control-label">You suck!!!Wrong pattern, Enter again-->
+<!--</div>-->
+<!--<div ng-show="userForm.firstName.$error.minlength"-->
+<!--class="control-label">First Name is too short.<-DICKHEAD->-->
+<!--</div>-->
+<!--<div ng-show="userForm.firstName.$error.maxlength" class="control-label">First-->
+<!--Name is too long.<-DICKHEAD->-->
+<!--</div>-->
+<!--<div ng-show="userForm.firstName.$error.required" class="control-label">You dumb fuck!!Enter your name</div>-->
+<!--<div class="form-group row">-->
+<!--<label for="Name1" class="col-sm-4 col-form-label">Last Name</label>-->
+<!--<div class="col-sm-6">-->
+<!--<input name="firstName1" type="text" class="form-control" id="inputName1" placeholder="last Name"-->
+<!--ng-model="vm.user.lastName" ng-pattern="/^[a-zA-Z0-9]*$/" ng-minlength="3" ng-maxlength="8"-->
+<!--ng-pattern="/^[a-zA-Z0-9]*$/" required>-->
+
+<!--<div ng-show="userForm.firstName1.$invalid && !userForm.firstName1.$pristine">-->
+<!--<div ng-show="userForm.firstName1.$error.pattern"-->
+<!--class="form-group has-warning has-feedback">You suck!!!Enter again-->
+<!--</div>-->
+<!--<div ng-show="userForm.firstName1.$error.minlength"-->
+<!--class="form-group has-warning has-feedback">Last Name is too short.<-DICKHEAD->-->
+<!--</div>-->
+<!--<div ng-show="userForm.firstName1.$error.maxlength" class="form-group has-warning has-feedback">Last-->
+<!--Name is too long.<-DICKHEAD->-->
+<!--</div>-->
+<!--<div ng-show="userForm.firstName.$error.required">You dumb fuck!!Enter your name-->
+<!--</div>-->
+<!--</div>-->
+
+<!--</div>-->
+<!--</div>-->
