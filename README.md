@@ -59,6 +59,6 @@ The application will run on port 3000, so go to [http://localhost:3000] (http://
 * Chat logs are preserved, in memory storage. Therefore, user can always switch persons and can view his previous chats with anyone at anytime.
 * Photo sharing feature allows to share any image file with the other user, with all the shared files being saved at '/UploadedFiles' folder in the server machine.
 * Apart from private data sharing with other users, Chat Groups can be created by clicking on add group glypicon, just below friend list.
-* A separate dialogue box for creating Chat Groups showing neccessary fields, group name,tagline and members., 
+* A separate dialogue box for creating Chat Groups showing neccessary fields, group name,tagline and members.
 
 
