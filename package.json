@@ -9,7 +9,10 @@
   "author": "Suraj Anthwal",
   "license": "ISC",
   "dependencies": {
+    "connect-multiparty": "^2.0.0",
     "express": "^4.14.0",
+    "multer": "^1.2.0",
+    "multiparty": "^4.1.2",
     "socket.io": "^1.4.8"
   }
 }

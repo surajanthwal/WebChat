@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+</head>
+<body>
+<form name="userForm" ng-submit="submitForm()" novalidate>
+  <div class="form-group row">
+    <label for="groupName" class="col-xs-2 col-form-label">Group</label>
+    <div class="col-xs-10">
+      <input class="form-control" type="text" name="groupName" ng-model="grpName" ng-minlength="3" ng-maxlength="15"
+             ng-pattern="/^[a-zA-Z0-9]*$/" placeholder="Type group name..." id="groupNameInput" required>
+
+      <div ng-show="userForm.groupName.$invalid && !userForm.groupName.$pristine"
+           class="form-group has-error has-feedback">
+        <label ng-show="userForm.groupName.$error" class="control-label" for="groupName">Please choose a suitable Group
+          name</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="tagLine" class="col-xs-2 col-form-label">Tagline</label>
+    <div class="col-xs-10">
+      <input class="form-control" type="text" name="tagLine" ng-model="grpStatus" ng-minlength="3" ng-maxlength="25"
+             ng-pattern="/^[a-zA-Z0-9]*$/" placeholder="Type group status..." id="groupStatus">
+      <div ng-show="userForm.tagLine.$invalid && !userForm.tagLine.$pristine"
+           class="form-group has-error has-feedback">
+        <label ng-show="userForm.tagLine.$error" class="control-label" for="tagLine">Please choose a suitable
+          status</label>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="form-group row">
+    <label for="friends" class="col-xs-3 col-form-label">Participants</label>
+    <div class="col-xs-9">
+      <div ng-dropdown-multiselect="" options="friends" selected-model="friend"
+           extra-settings="settings">
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="offset-sm-2 col-sm-10">
+      <button ng-disabled="userForm.$invalid" type="submit" class="btn btn-primary">Create Group</button>
+    </div>
+  </div>
+  <!--<button type="submit" class="btn btn-primary">Create Group</button>-->
+</form>
+
+</body>
+</html>

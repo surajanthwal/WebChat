@@ -102,7 +102,7 @@ body {
 .ui .list-friends {
   list-style: none;
   font-size: 13px;
-  height: 88%;
+  height: 50%;
 }
 .ui .list-friends img {
   margin: 5px;
@@ -293,4 +293,19 @@ body {
 }
 .ui i.fa-picture-o {
   margin-left: 5%;
+}
+
+
+.imgClass:before {
+  left: 16px;
+  border-bottom-color: #62bf6e;
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  top: -12px;
+  border-bottom: 12px solid #62bf6e;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  box-sizing: border-box;
 }
