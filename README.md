@@ -2,7 +2,7 @@
 A simple Web based Chat Application for sending and receiving messages,private and group, and images at real time.
 
 WebChat provides its user an interface for communicating with each other via sending/receiving files and messages, creating group converstaions.
-** AngularJs** is used as a front-end framework supported by NodeJs at backend. **HTML/CSS**, Twitter **Bootstrap** are used for styling the web page along with custom CSS file. Various Angular Modules from angular libraries, like ng-dialog, angular-resource, angular-ui-router, angular-notify, ng-file-upload, etc, are used for providing the neccesary web page components which were customized as per needs.
+**AngularJs** is used as a front-end framework supported by NodeJs at backend. **HTML/CSS**, Twitter **Bootstrap** are used for styling the web page along with custom CSS file. Various Angular Modules from angular libraries, like ng-dialog, angular-resource, angular-ui-router, angular-notify, ng-file-upload, etc, are used for providing the neccesary web page components which were customized as per needs.
 **Socket.io** is being used as a third party library for sending and receiving data packets in realtime. **Express**, a backend framework for **NodeJs** applications, Multiparty , Socket.io and other middlewares are used in NodeJs for supporting the front end architecture.
 
 ## Prerequisites
