@@ -18,13 +18,13 @@
 
         <div ng-show="userForm.firstName.$invalid && !userForm.firstName.$pristine"
              class="form-group has-error has-feedback">
-          <label ng-show="userForm.firstName.$error.pattern" class="control-label" for="inputName">You suck!!!Wrong
+          <label ng-show="userForm.firstName.$error.pattern" class="control-label" for="inputName">Wrong
             pattern, Enter again</label>
           <label ng-show="userForm.firstName.$error.minlength" class="control-label" for="inputName">First Name is too
-            short.<-DICKHEAD-></label>
+            short. Please type again!!!</label>
           <label ng-show="userForm.firstName.$error.maxlength" class="control-label" for="inputName">First Name is too
-            long.<-DICKHEAD-></label>
-          <label ng-show="userForm.firstName.$error.required" class="control-label" for="inputName">You dumb fuck!!Enter
+            long!!!</label>
+          <label ng-show="userForm.firstName.$error.required" class="control-label" for="inputName">Please enter
             your name</label>
         </div>
 
@@ -45,8 +45,7 @@
         <div ng-show="userForm.text.$invalid && !userForm.text.$pristine" class="form-group has-error has-feedback">
           <label ng-show="userForm.text.$error.minlength" class="control-label" for="exampleTextarea">Please enter a
             normal status!!</label>
-          <label ng-show="userForm.text.$error.required" class="control-label" for="exampleTextarea">You dumb
-            fuck!!Enter your status</label>
+          <label ng-show="userForm.text.$error.required" class="control-label" for="exampleTextarea">Please enter your status</label>
         </div>
 
         <!--<div ng-show="userForm.text.$invalid && !userForm.text.$pristine">-->
